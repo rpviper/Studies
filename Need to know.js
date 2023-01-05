@@ -1,4 +1,20 @@
-'use strict';
+"use strict";
+
+/* GIT 
+…or create a new repository on the command line
+echo "# lol" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/rpviper/lol.git
+git push -u origin main
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/rpviper/lol.git
+git branch -M main
+git push -u origin main
+*/
 
 /* 4 STEPS TO SOLVE A PROBLEM
 
@@ -68,7 +84,7 @@ ASYNCHRONOUS CODE
 // console.log("Raino")    // Raino and 23 are values
 // console.log(23)
 
-let firstName = 'Raino'; // firstName is declaring a variable, means the variable can change
+let firstName = "Raino"; // firstName is declaring a variable, means the variable can change
 // console.log(firstName)
 
 2 ** 3; // 2 to the power of 3 aka 2 * 2 * 2
@@ -76,7 +92,7 @@ let firstName = 'Raino'; // firstName is declaring a variable, means the variabl
 // 7 PRIMITIVE DATA TYPES ---------------------------------------------------------------------------------------------------------------------------
 
 let age = 23; // Number
-let name = 'Raino'; // String, used for text
+let name = "Raino"; // String, used for text
 let fullAge = true; // Boolean, used for taking decisions, either true or false
 let children; // Undefined, empty value, can be added later
 // Null, also means emopty value
@@ -86,7 +102,7 @@ let children; // Undefined, empty value, can be added later
 // -------------------------------------------------------------------------------------------------------------------------------------------------
 
 let javaScriptIsFun = true; // Simply changing the variable
-javaScriptIsFun = 'Yes!';
+javaScriptIsFun = "Yes!";
 
 const rainoBirthYear = 1982;
 let currentYear = 2022;
@@ -155,20 +171,20 @@ A || !B  = false
 
 // Switch statement -----------------------------------------------------------------------------------------------------------------------------
 
-const day = 'Friday';
+const day = "Friday";
 
 switch (day) {
-  case 'Monday':
+  case "Monday":
     // console.log('Go to work');
     break;
-  case 'Tuesday':
+  case "Tuesday":
     // console.log('Do studying');
     break;
-  case 'Thursday':
-  case 'Friday':
+  case "Thursday":
+  case "Friday":
     // console.log('Get ready for the weekend');
     break;
-  case 'Saturday':
+  case "Saturday":
     // console.log('Have a rest');
     break;
   default:
@@ -240,7 +256,7 @@ const age3 = calcAge1(1991);
 
 // Arrow function ---------------------------------------------------------------------------------------------------------------------------------
 
-const calcAge2 = birthYear => currentYear - birthYear; // Without {} you can have a one line function
+const calcAge2 = (birthYear) => currentYear - birthYear; // Without {} you can have a one line function
 const age4 = calcAge2(1982);
 // console.log(age4)
 
@@ -297,11 +313,11 @@ const yearsUntilRetirement1 = (birthYear, firstName) => {
 
 // Arrays ----------------------------------------------------------------------------------------------------------------------------------
 
-const friends = ['Michael', 'John', 'Peter']; // To put something in the array
+const friends = ["Michael", "John", "Peter"]; // To put something in the array
 // console.log(friends[0]);    // To get something out of the array, zero based, will be Michael
 // console.log(friends.length);    // Number of elements in the array
 // console.log(friends[friends.length - 1]);   // Will get the last element of the array
-friends[2] = 'Jay'; // Now the Peter is changed to Jay
+friends[2] = "Jay"; // Now the Peter is changed to Jay
 // let birthYear = 1982;
 // const Raino = [firstName, 'Paal', currentYear - birthYear, friends]; // It's all valid, even the friends array in here
 const years = [1990, 1992, 2000, 2002];
@@ -320,8 +336,8 @@ const ages = [
 ];
 
 // ADDS ELEMENTS
-friends.push('Rudolph'); // Pushes Rudolph in the end of the array
-friends.unshift('Tom'); // Pushes Tom in the beginning of the array
+friends.push("Rudolph"); // Pushes Rudolph in the end of the array
+friends.unshift("Tom"); // Pushes Tom in the beginning of the array
 
 // REMOVES E`LEMENTS
 friends.pop(); // Removes the last element
@@ -334,11 +350,11 @@ friends.shift(); // Removes the first element
 // Objects ---------------------------------------------------------------------------------------------------------------------------
 
 const raino = {
-  firstName: 'Raino', // Each of these are called properties
-  lastName: 'Ace', // They are shown afterwards aphabetically
+  firstName: "Raino", // Each of these are called properties
+  lastName: "Ace", // They are shown afterwards aphabetically
   birthYear: 1982,
-  job: 'student',
-  friends: ['Michael', 'Tom', 'Bob'],
+  job: "student",
+  friends: ["Michael", "Tom", "Bob"],
   hasDriversLicense: false,
 
   // calcAge: function(birthYear) {      // You can insert functions into objects
@@ -352,17 +368,17 @@ const raino = {
 
   getSummary: function () {
     return `${this.firstName} is a ${this.calcAge()} years old ${this.job},
-        and he has ${this.hasDriversLicense ? 'a' : 'no'} driving license `;
+        and he has ${this.hasDriversLicense ? "a" : "no"} driving license `;
   },
 };
 // console.log(raino.getSummary())
 
-raino.location = 'Estonia'; // Will add location to raino object
+raino.location = "Estonia"; // Will add location to raino object
 
 // console.log(raino.job);     // Dotted notation
 // console.log(raino['job']);  // Bracket notation
 
-const nameKey = 'Name';
+const nameKey = "Name";
 // console.log(raino['first' + nameKey]);  // Only with the bracket notation you can do stuff like this
 // console.log(raino['last' + nameKey]);
 
@@ -389,11 +405,11 @@ for (let repetition = 1; repetition <= 10; repetition++) {
 }
 
 const rainoArray = [
-  'Raino',
-  'Ace',
-  'student',
+  "Raino",
+  "Ace",
+  "student",
   currentYear - birthYear,
-  ['Michael', 'Bob', 'Rob'],
+  ["Michael", "Bob", "Rob"],
 ];
 
 const types = [];
@@ -421,13 +437,13 @@ for (let i = 0; i < years1.length; i++) {
 // console.log('---ONLY STRINGS---')
 for (let i = 0; i < rainoArray.length; i++) {
   // If there is not a string continue
-  if (typeof rainoArray[i] !== 'string') continue;
+  if (typeof rainoArray[i] !== "string") continue;
   // console.log(rainoArray[i])
 }
 // console.log('---BREAK WITH A NUMBER---')
 for (let i = 0; i < rainoArray.length; i++) {
   // When first number is found, break/end the loop completely
-  if (typeof rainoArray[i] === 'number') break;
+  if (typeof rainoArray[i] === "number") break;
   // console.log(rainoArray[i])
 }
 
@@ -476,8 +492,8 @@ while (dice !== 6) {
 // Subtract min from max (amplitude) and return it.
 // Problem 2, merge the two arrays
 
-const temp1 = [3, -22, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
-const temp2 = [8, -3, -6, 0, 'error', 9, 13, 'error', 2, 14, 19, 5];
+const temp1 = [3, -22, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
+const temp2 = [8, -3, -6, 0, "error", 9, 13, "error", 2, 14, 19, 5];
 
 const temperatures = temp1.concat(temp2); // Merge the arrays
 
@@ -487,7 +503,7 @@ const calcTempAmplitude = function (temperatures) {
 
   for (let i = 0; i < temperatures.length; i++) {
     const curTemp = temperatures[i];
-    if (typeof curTemp !== 'number') continue; // Aka ignore the 'error' part since its not a number
+    if (typeof curTemp !== "number") continue; // Aka ignore the 'error' part since its not a number
 
     if (curTemp > max) max = curTemp;
     if (curTemp < min) min = curTemp;
@@ -505,8 +521,8 @@ const amplitude = calcTempAmplitude(temperatures);
 
 const measureKelvin = function () {
   const measurement = {
-    type: 'temp',
-    unit: 'celcius',
+    type: "temp",
+    unit: "celcius",
     // value: Number(prompt("Degrees celcius:")),
   };
   const kelvin = measurement.value + 273;
@@ -516,35 +532,35 @@ const measureKelvin = function () {
 
 // Selecting a DOM element -------------------------------------------------------------------------------------------------------------------------
 
-document.querySelector('.message').textContent = 'Whatever you wanna say here';
+document.querySelector(".message").textContent = "Whatever you wanna say here";
 // A class selector, selects this: <p class="message">Start guessing...</p>
 
-document.querySelector('.guess').value = 23; // Is an input field
+document.querySelector(".guess").value = 23; // Is an input field
 
-document.querySelector('.check').addEventListener('click', function () {
-  console.log(document.querySelector('.guess').value); // Clicking with mouse from class check does the console log function
+document.querySelector(".check").addEventListener("click", function () {
+  console.log(document.querySelector(".guess").value); // Clicking with mouse from class check does the console log function
 });
 
-document.querySelector('body').style.backgroundColor = '#60b347'; // CSS selection from body, then style, then background-color
+document.querySelector("body").style.backgroundColor = "#60b347"; // CSS selection from body, then style, then background-color
 // Written in camelcase in JavaScript background-color = backgroundColor
 
 const displayMessage = function (message) {
-  document.querySelector('.message').textContent = 'Some message'; // Making queryselector into a function so you don't
+  document.querySelector(".message").textContent = "Some message"; // Making queryselector into a function so you don't
 }; // have to type it over and over again
 
-document.querySelectorAll('.show-modal'); // It is used for something that has multiple items you have to choose/loop
+document.querySelectorAll(".show-modal"); // It is used for something that has multiple items you have to choose/loop
 
-modal.classList.remove('hidden'); // To manipulate classes
+modal.classList.remove("hidden"); // To manipulate classes
 
-document.addEventListener('keydown', function () {}); // To listen to a keyboard
+document.addEventListener("keydown", function () {}); // To listen to a keyboard
 
-document.querySelector('#score--0'); // This is an ID selector from CSS
+document.querySelector("#score--0"); // This is an ID selector from CSS
 
 // SCOPES ------------------------------------------------------------------------------------------------------------------------------------------------
 // Scope chain, is the order in which functions are written in the code
 // Calls stack is the order in which functions are called
 // Global scope
-const me = 'Raino';
+const me = "Raino";
 const born = 1982;
 /* Outside of any function or block
 Variables declared in global scope are accessible everywhere */
@@ -586,20 +602,20 @@ function calcBornAge(birthYear) {
   return age;
 }
 
-const rainoFirstName = 'Raino';
+const rainoFirstName = "Raino";
 calcBornAge(1982);
 // console.log(age); // ReferenceError
 printAge(); // ReferenceError
 
 // -------------------------------------
 
-const myName = 'Jonas';
+const myName = "Jonas";
 
-if (myName === 'Jonas') {
+if (myName === "Jonas") {
   // console.log(`${job}`); // ReferenceError: cannot acces 'job' before initialization
   const age = 2022 - 1982;
   // console.log(age);
-  const job = 'teacher';
+  const job = "teacher";
 }
 
 // This keyword ---------------------------------------------------------------------------------------------------------------------------------------
@@ -610,7 +626,7 @@ const calcAge3 = function (birthYear) {
 };
 calcAge3(1982);
 
-const calcAgeArrow = birthYear => {
+const calcAgeArrow = (birthYear) => {
   // console.log(2022 - birthYear);
   // console.log(this); // Will be window, because arrow function doesn't get its own this keyword
 };
@@ -636,7 +652,7 @@ age5 = 31;
 
 // Reference type example
 const jessica = {
-  name: 'Jessica', // Because these are references only, they will change
+  name: "Jessica", // Because these are references only, they will change
   age: 30,
 };
 const friend = jessica;
@@ -647,17 +663,17 @@ friend.age = 27;
 
 // Copying objects
 const jessica2 = {
-  firstName: 'Jessica',
-  lastName: 'Williams',
+  firstName: "Jessica",
+  lastName: "Williams",
   age: 27,
-  family: ['John', 'Mary'], // Because these are nested deeper than just first level, see line 618
+  family: ["John", "Mary"], // Because these are nested deeper than just first level, see line 618
 };
 const jessicaCopy = Object.assign({}, jessica2); // Assigning to an empty object {}
-jessicaCopy.lastName = 'Davis';
+jessicaCopy.lastName = "Davis";
 // console.log('Before marriage:', jessica2); // {lastName: 'Williams'}
 // console.log('After marriage:', jessicaCopy); // {lastName: 'Davis'}
-jessicaCopy.family.push('Peter'); // Doing this will not replace family array, but add names
-jessicaCopy.family.push('Victor'); // to both jessicaCopy and jessica2 objects
+jessicaCopy.family.push("Peter"); // Doing this will not replace family array, but add names
+jessicaCopy.family.push("Victor"); // to both jessicaCopy and jessica2 objects
 
 // Array destructuring --------------------------------------------------------------------------------------------------------------------------------
 
@@ -666,11 +682,11 @@ const [x, y, z] = array;
 // console.log(x, y, z); // 2, 3, 4, it won't change the original array
 
 const restaurant = {
-  restaurantName: 'Classico Italiano',
-  location: 'Via Angelo Tavanti 23, Firenze, Italy',
-  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
-  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
-  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+  restaurantName: "Classico Italiano",
+  location: "Via Angelo Tavanti 23, Firenze, Italy",
+  categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
+  starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
+  mainMenu: ["Pizza", "Pasta", "Risotto"],
 
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]]; // this.o of course means restaurant object here
@@ -713,8 +729,8 @@ const restaurant = {
   },
 };
 restaurant.orderDelivery({
-  time: '22:30',
-  address: 'Elva 26',
+  time: "22:30",
+  address: "Elva 26",
   mainIndex: 2,
   starterIndex: 2,
 });
@@ -776,7 +792,7 @@ const newArray = [1, 2, ...arr]; // Takes everything that's in arr and adds it t
 // console.log(newArray); // [1, 2, 7, 8, 9] but it leaves the array [] around it
 // console.log(...newArray); // 1, 2, 7, 8, 9 removes the array [] brackets*
 
-const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+const newMenu = [...restaurant.mainMenu, "Gnocci"];
 // We make a new array named newMenu, which grabs everything from old mainMenu and adds also Gnocci
 
 // Copy array
@@ -786,8 +802,8 @@ const mainMenuCopy = [...restaurant.mainMenu];
 const menu2 = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
 // Strings example
-const str = 'Jonas';
-const letters = [...str, '', 'S.'];
+const str = "Jonas";
+const letters = [...str, "", "S."];
 // console.log(letters); // 'J', 'o', 'n', 'a', 's', '', 'S.'
 // console.log(...str); // J o n a s without the ''
 // console.log(`${...str}`); will NOT work
@@ -800,7 +816,7 @@ const ingredients = [
 restaurant.orderPasta(...ingredients); // Will display what is typed into prompt
 
 // Object example
-const newRestaurant = { foundedIn: 1991, ...restaurant, founder: 'Mario' };
+const newRestaurant = { foundedIn: 1991, ...restaurant, founder: "Mario" };
 // You can use the spread wherever, the order doesn't matter. foundedIn and founder are new and added
 
 // Rest method ... ------------------------------------------------------------------------------------------------------------------------------------
@@ -829,7 +845,7 @@ add(1, 2, 5, 8, 3, 5, 8);
 const e = [23, 5, 7];
 add(...e); // Adds new array e no problem
 
-restaurant.orderPizza('mushrooms', 'onion', 'tomato', 'olives');
+restaurant.orderPizza("mushrooms", "onion", "tomato", "olives");
 // Rest method, mushrooms is main ingredient, rest are all in separate array, called other ingredients
 
 // Short-circuiting (&& and ||) -----------------------------------------------------------------------------------------------------------------------------------
@@ -847,7 +863,7 @@ const guests = restaurant.numGuests || 10;
 // console.log(0 && 'Jonas'); // 0 => first falsy
 // console.log(7 && 'Jonas'); // Jonas, simply returns the last value since no falsy found
 
-restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
+restaurant.orderPizza && restaurant.orderPizza("mushrooms", "spinach");
 // Checks if restaurant.orderPizza even exists (if it wouldn't, it would stop asap because of short circuit)
 // And then checks the other part
 
@@ -856,7 +872,7 @@ const rest1 = {
   numberOfGuests: 0, // Totally acceptable to have only 0 guests, but || will return it as falsy
 };
 const rest2 = {
-  name: 'La Plaza',
+  name: "La Plaza",
 };
 rest1.numberOfGuests = rest1.numberOfGuests || 10; // See if numberOfGuests exists, if not change to 10
 rest1.numberOfGuests ||= 10; // Shorthand way to write it
@@ -879,9 +895,9 @@ for (const [item, element] of myMenu.entries()) {
 // Does what is directly left to the ? mark exists (mon), then take open next
 // If it doesn't exist, return undefined
 
-const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 for (const day of days) {
-  const open = restaurant.openingHours[day]?.open || 'closed';
+  const open = restaurant.openingHours[day]?.open || "closed";
   // Since the day is coming dynamically, needs [], || 'closed' gets rid of the undefined part
   // console.log(`On ${day} we open at ${open}`);
 }
@@ -891,7 +907,7 @@ for (const day of days) {
 // Does order exist? Return products (0, 1) If not => method does not exist
 
 // Arrays
-const users = [{ name: 'Jonas', email: 'some.email@hot.ee' }];
+const users = [{ name: "Jonas", email: "some.email@hot.ee" }];
 // console.log(users[0]?.name ?? 'User array is empty');
 // Does users have someone in pos [0], return name, if not return the message
 if (users.length > 0) console.log(users[0].name);
@@ -932,14 +948,14 @@ average /= odds.length; // Averasge = average / odds.length (aka 3)
 // To loop over the odds and print winner
 for (const [team, odd] of Object.entries(game.odds)) {
   // In here we need object.entries
-  const teamStr = team === 'x' ? 'Draw' : `Winner ${game[team]}`;
+  const teamStr = team === "x" ? "Draw" : `Winner ${game[team]}`;
   // game.odds, when there's x(draw), print it as draw, rest print as winner game[team] comes from the football challenge
   // console.log(`Odd of ${teamStr} ${odd}`);
 }
 
 // Sets ------------------------------------------------------------------------------------------------------------------------------------------------
 // Basically removes duplicates
-const orderSet = new Set(['pasta', 'pizza', 'pasta', 'pizza', 'pizza']);
+const orderSet = new Set(["pasta", "pizza", "pasta", "pizza", "pizza"]);
 // console.log(orderSet); // {'pasta', 'pizza'}
 
 // console.log(new Set('Aadukas')); // A a d u k s => be careful with capital letters
@@ -947,8 +963,8 @@ const orderSet = new Set(['pasta', 'pizza', 'pasta', 'pizza', 'pizza']);
 // console.log(orderSet.size); // 2, not .length like on array
 // console.log(orderSet.has('pizza')); // True
 // console.log(orderSet.has('bread'));   // False
-orderSet.add('juice');
-orderSet.delete('pasta');
+orderSet.add("juice");
+orderSet.delete("pasta");
 for (const order of orderSet) {
 }
 // console.log(order); // Loops over them
@@ -964,15 +980,15 @@ const uniqueNumbers = [...new Set(numbers)];
 // Maps -----------------------------------------------------------------------------------------------------------------------------------------------
 // To map values to keys
 const rest = new Map();
-rest.set('name', 'Mamma Mia');
-rest.set(1, 'Portugal'); // They are added here asap, consolelog would already show them
-rest.set(2, 'Estonia');
+rest.set("name", "Mamma Mia");
+rest.set(1, "Portugal"); // They are added here asap, consolelog would already show them
+rest.set(2, "Estonia");
 rest
-  .set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
-  .set('open', 11)
-  .set('close', 23) // Can do chaining no problem
-  .set(true, 'We are open')
-  .set(false, 'We are closed');
+  .set("categories", ["Italian", "Pizzeria", "Vegetarian", "Organic"])
+  .set("open", 11)
+  .set("close", 23) // Can do chaining no problem
+  .set(true, "We are open")
+  .set(false, "We are closed");
 // console.log(rest.get('name'));  // Mamma Mia
 // console.log(rest.get(1));       // Portugal
 // console.log(rest.get(true));    // We are open
@@ -983,28 +999,28 @@ const time = 21;
 rest.delete(2); // Deletes 2, Estonia
 rest.clear(); // Clears/deletes everything
 const array2 = [1, 2];
-rest.set(array2, 'test'); // We cannot add [1 ,2] simply here and then .get it, it won't work
+rest.set(array2, "test"); // We cannot add [1 ,2] simply here and then .get it, it won't work
 // Have to make it into array first and then we can call
 rest.get(array2);
 
 // Other ways to populate map()
 const question = new Map([
-  ['question', 'What is the best programming language?'],
-  [1, 'C'],
-  [2, 'Java'],
-  [3, 'JavaScript'],
-  ['correct', 3],
-  [true, 'Correct!'],
-  [false, 'Try again!'],
+  ["question", "What is the best programming language?"],
+  [1, "C"],
+  [2, "Java"],
+  [3, "JavaScript"],
+  ["correct", 3],
+  [true, "Correct!"],
+  [false, "Try again!"],
 ]);
-console.log(question.get('question')); // What is the best programming language?
+console.log(question.get("question")); // What is the best programming language?
 for (const [key, value] of question)
-  if (typeof key === 'number') {
+  if (typeof key === "number") {
   }
 // If the key is a number aka [1, 'C']
 // console.log(`Answer ${key}: ${value}`);
 
-const answer = Number(prompt('Your answer?'));
+const answer = Number(prompt("Your answer?"));
 // console.log(answer);
 
 // To convert object to map(), since it looks very similar to Object.entries
@@ -1018,8 +1034,8 @@ const hoursMap = new Map(Object.entries(openingHours));
 const events = [...new Set(question.values())]; // To get all that's after numbers
 
 // Working with strings -----------------------------------------------------------------------------------------------------------------------------------
-const airline = 'TAP Air Portugal';
-const plane = 'A234';
+const airline = "TAP Air Portugal";
+const plane = "A234";
 // console.log(plane[1]);  // 2
 // console.log('B9300' [0]); // B
 // console.log(airline.length);  // 16
@@ -1042,10 +1058,10 @@ const plane = 'A234';
 const checkMiddleSeat = function (middleSeat) {
   // B and E are middle seats
   const seat = middleSeat.slice(-1);
-  if (seat === 'B' || seat === 'E') {
-    console.log('You got the middle seat :(');
+  if (seat === "B" || seat === "E") {
+    console.log("You got the middle seat :(");
   } else {
-    console.log('You got lucky!');
+    console.log("You got lucky!");
   }
 };
 // checkMiddleSeat('11B');
@@ -1053,7 +1069,7 @@ const checkMiddleSeat = function (middleSeat) {
 // checkMiddleSeat('3E');
 
 // For example we wanna fix passenger name
-const passenger = 'jOnAs';
+const passenger = "jOnAs";
 const passengerLowerCase = passenger.toLowerCase();
 const passengerCorrect =
   passengerLowerCase[0].toUpperCase() + passengerLowerCase.slice(1);
@@ -1068,25 +1084,25 @@ const fixPassengerNames = function (passenger) {
 // console.log(fixPassengerNames('RaInO'));
 
 // Replacing
-const priceGB = '£200,97';
-const priceUS = priceGB.replace('£', '$').replace(',', '.'); // But it only replaces first occurence only
+const priceGB = "£200,97";
+const priceUS = priceGB.replace("£", "$").replace(",", "."); // But it only replaces first occurence only
 // First what to replace with what
-const announcement = 'All guests should use gate 1, I repeat gate 1';
+const announcement = "All guests should use gate 1, I repeat gate 1";
 // console.log(announcement.replaceAll('gate', 'door')); // This replaces all duh
 
-const plane2 = 'BA320neo';
+const plane2 = "BA320neo";
 // console.log(plane2.includes('A3')); // True
 // console.log(plane2.startsWith('Air'));  // False
 
 // Split and join
 // console.log('a+very+nice+string'.split('+')); // 'a', 'very', 'nice', 'string'
-let [myFirstName, lastName] = 'Raino Paal'.split(' '); // 'Raino', 'Paal'
-const newName = ['Mr.', myFirstName, lastName].join('---');
+let [myFirstName, lastName] = "Raino Paal".split(" "); // 'Raino', 'Paal'
+const newName = ["Mr.", myFirstName, lastName].join("---");
 // console.log(newName); // Mr.---Raino---Paal
 
 // Uppercase function
 const capitalizeName = function (inputName) {
-  const names = inputName.split(' ');
+  const names = inputName.split(" ");
   const namesUpper = [];
   for (const inputName of names) {
     // namesUpper.push(inputName[0].toUpperCase() + inputName.slice(1));  // Two ways same function
@@ -1095,27 +1111,27 @@ const capitalizeName = function (inputName) {
     );
     // Take a inputName, replace position [0] and replace the same position with an uppercase
   }
-  console.log(namesUpper.join(' '));
+  console.log(namesUpper.join(" "));
 };
-capitalizeName('jessica ann smith davis');
-capitalizeName('raino paal');
+capitalizeName("jessica ann smith davis");
+capitalizeName("raino paal");
 
 // Padding a string
-const message = 'Go to gate 7';
-console.log(message.padStart(25, '+').padEnd(35, '+'));
+const message = "Go to gate 7";
+console.log(message.padStart(25, "+").padEnd(35, "+"));
 // The padding is together with the string, that's why in the end it needs more
 
 const maskCreditCard = function (number) {
-  const str = number + ''; // To make number to a string, same as String()
+  const str = number + ""; // To make number to a string, same as String()
   const last = str.slice(-4); // Taking last 4 digits
-  return last.padStart(str.length, '*'); // Take the whole string length and replace with *
+  return last.padStart(str.length, "*"); // Take the whole string length and replace with *
 };
 // console.log(maskCreditCard(514515611351));
 // console.log(maskCreditCard(5256358));
 // console.log(maskCreditCard('514515611351'));
 
 // Repeat method
-const message2 = 'Bad weather warning!';
+const message2 = "Bad weather warning!";
 // console.log(message2.repeat(5));
 
 function planesInLine(plane) {
@@ -1142,7 +1158,7 @@ const createBooking = function (
   bookings.push(booking);
   // console.log(booking);
 };
-createBooking('LH223', 2, 800);
+createBooking("LH223", 2, 800);
 
 // Hihjer order functions
 // A function that receives another function as an argument, that returns a new function, or both
@@ -1160,11 +1176,11 @@ function count() {
 }
 
 const oneWord = function (str) {
-  return str.replaceAll(' ', ''); // Replace space with no space
+  return str.replaceAll(" ", ""); // Replace space with no space
 };
 const upperFirstWord = function (str) {
-  const [first, ...others] = str.split(' '); // First word and rest of the words
-  return [first.toUpperCase(), ...others].join(' '); // Join them together again
+  const [first, ...others] = str.split(" "); // First word and rest of the words
+  return [first.toUpperCase(), ...others].join(" "); // Join them together again
 };
 // Higher order function
 const transformer = function (str, fn) {
@@ -1173,8 +1189,8 @@ const transformer = function (str, fn) {
   // console.log(`Trasnformed string: ${fn(str)}`);
 };
 // Callback function
-transformer('javascript is the best', upperFirstWord); // JAVASCRIPT is the best
-transformer('javascript is the best', oneWord); // javascriptisthebest
+transformer("javascript is the best", upperFirstWord); // JAVASCRIPT is the best
+transformer("javascript is the best", oneWord); // javascriptisthebest
 
 // Functions returning a new function
 const greet = function (greeting) {
@@ -1182,11 +1198,11 @@ const greet = function (greeting) {
     // console.log(`${greeting} ${name}`);
   };
 };
-const greetings = greet('Hello there');
-greetings('Raino'); // Hello there Raino
-greetings('Julia'); // Hello there Julia
+const greetings = greet("Hello there");
+greetings("Raino"); // Hello there Raino
+greetings("Julia"); // Hello there Julia
 // Can insert directly too
-greet('Hello')('Jonas'); // Uses both functions, greet and name
+greet("Hello")("Jonas"); // Uses both functions, greet and name
 
 // As an arrow function, passing in another function
 // const greetArr = greeting => whosName => console.log(`${greeting} ${whosName}`);
@@ -1194,8 +1210,8 @@ greet('Hello')('Jonas'); // Uses both functions, greet and name
 
 // Call method ---------------------------------------------------------------------------------------------------------------------------------------------
 const lufthansa = {
-  airline: 'Lufthansa',
-  iataCode: 'LH',
+  airline: "Lufthansa",
+  iataCode: "LH",
   bookings: [],
   book: function (flightNum, name) {
     // console.log(
@@ -1205,24 +1221,24 @@ const lufthansa = {
     // Makes a new object
   },
 };
-lufthansa.book(239, 'John Smith'); // John Smith booked a flight on Lufthansa fligh LH239
-lufthansa.book(666, 'Devils Son');
+lufthansa.book(239, "John Smith"); // John Smith booked a flight on Lufthansa fligh LH239
+lufthansa.book(666, "Devils Son");
 // console.log(lufthansa);
 
 const eurowings = {
-  airline: 'EuroWings',
-  iataCode: 'EW',
+  airline: "EuroWings",
+  iataCode: "EW",
   bookings: [],
 };
 const book = lufthansa.book;
 // book(23, 'Sarah Williams')  // This DOES not work, since now the this. keyword directs to undefined
 
-book.call(eurowings, 23, 'Sarah Williams'); // Have to use a call
+book.call(eurowings, 23, "Sarah Williams"); // Have to use a call
 // console.log(eurowings);
-book.call(lufthansa, 656, 'Mary Cooper');
+book.call(lufthansa, 656, "Mary Cooper");
 // console.log(lufthansa);
 
-const flightData = [583, 'George Looney'];
+const flightData = [583, "George Looney"];
 book.call(eurowings, ...flightData); // Use eurowings and take everything what's in there with ...
 // console.log(eurowings);
 
@@ -1230,10 +1246,10 @@ book.call(eurowings, ...flightData); // Use eurowings and take everything what's
 // The difference between bind and call method is, that bind doesn't call the this. keyword
 // It binds to it forever, makes it it's own
 const bookEurowings = book.bind(eurowings); // Have to add it to the variable
-bookEurowings(23, 'Steven Klein'); // And then can simply call it
+bookEurowings(23, "Steven Klein"); // And then can simply call it
 // Partial application
 const bookEurowings23 = book.bind(eurowings, 23); // In here now we not only bind the airline but also the flight number
-bookEurowings23('Jack The Ripper'); // So all we need to add is the name
+bookEurowings23("Jack The Ripper"); // So all we need to add is the name
 
 // With Event Listeners
 lufthansa.planes = 300;
@@ -1245,8 +1261,8 @@ lufthansa.buyPlane = function () {
 };
 // document.querySelector('.buy').addEventListener('click', lufthansa.buyPlane);
 document
-  .querySelector('.buy')
-  .addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
+  .querySelector(".buy")
+  .addEventListener("click", lufthansa.buyPlane.bind(lufthansa));
 // So we have to use the .bind method to make the this. keyword work
 
 const addTax = (rate, value) => value + value * rate;
@@ -1280,7 +1296,7 @@ boardingPassengers(180, 3);
 
 // Array nethods ------------------------------------------------------------------------------------------------------------------------------------
 // Slice, does NOT change the original array
-let arr2 = ['a', 'b', 'c', 'd', 'e'];
+let arr2 = ["a", "b", "c", "d", "e"];
 // console.log(arr2.slice(2)); // ['c', 'd', 'e'];
 // console.log(arr2.slice(2, 4)); // ['c', 'd'];
 // console.log(arr2.slice(-1));  // ['e']
@@ -1307,7 +1323,7 @@ const letters2 = arr.concat(arr2); // Adds two arrays together
 const arr3 = [23, 11, 65];
 // console.log(arr3.at(0));  // 23
 // console.log(arr3.at(-1)); // 65
-console.log('Jonas'.at(-1)); // s
+console.log("Jonas".at(-1)); // s
 
 // Foreach -------------------------------------------------------------------------------------------------------------------------------------------
 // For loop example
@@ -1335,9 +1351,9 @@ movements.forEach(function (movement, index, array) {
 
 // Map forEach
 const currencies = new Map([
-  ['USD', 'United States dollar'],
-  ['EUR', 'Euro'],
-  ['GBP', 'Pound sterling'],
+  ["USD", "United States dollar"],
+  ["EUR", "Euro"],
+  ["GBP", "Pound sterling"],
 ]);
 currencies.forEach(function (value, key, map) {
   // console.log(`${key}: ${value}`);
@@ -1353,27 +1369,27 @@ const movementUSD = originArray.map(function (mov) {
 });
 // console.log(movementUSD);
 
-const movementUSD2 = originArray.map(mov => mov * eurToUsd);
+const movementUSD2 = originArray.map((mov) => mov * eurToUsd);
 // console.log(movementUSD2); // As an arrow function
 
 const moneyMoves = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const movementsDescriptions = moneyMoves.map(
   (mov, i) =>
-    `Movement ${i + 1}: You ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(
+    `Movement ${i + 1}: You ${mov > 0 ? "deposited" : "withdrew"} ${Math.abs(
       mov
     )}` // Movement nr 1, you (if movement > 0 : deposited, otherwise withdrew), Math.abs gets rid of minus sign
 );
 // console.log(movementsDescriptions);
 
-const user = 'Steven Thomas Williams'; // To make this as a username stw
+const user = "Steven Thomas Williams"; // To make this as a username stw
 const userName = user
   .toLowerCase()
-  .split(' ')
+  .split(" ")
   .map(function (name) {
     // Make lowercase, make cap in between every word
     return name[0]; // Map through the array (all 3 names), and then take the first letter
   })
-  .join(''); // Join them back together again
+  .join(""); // Join them back together again
 
 // Filter returns new array containing the array elements that passed a specific test condition
 // Filter: current > 2 => 3, 4, 3
@@ -1409,16 +1425,16 @@ const max = moneyMoves.reduce((acc, mov) => {
 
 // Chaining them all together
 const totalDepositsInUSD = moneyMoves
-  .filter(mov => mov > 0)
-  .map(mov => mov * eurToUsd)
+  .filter((mov) => mov > 0)
+  .map((mov) => mov * eurToUsd)
   .reduce((acc, mov) => acc + mov, 0); // This has to be last though, since others return array
 
 // Find method -------------------------------------------------------------------------------------------------------------------------------------
-const firstWithdrawal = movements.find(mov => mov < 0);
+const firstWithdrawal = movements.find((mov) => mov < 0);
 // console.log(firstWithdrawal);
 // The difference between find and filter method is, that find only returns first item it finds
 // That matches the condition, filter method returns an array
-const account = accounts.find(acc => acc.owner === 'Jessica Davis'); // To find a single name for example
+const account = accounts.find((acc) => acc.owner === "Jessica Davis"); // To find a single name for example
 // console.log(account);   // Jessica Davis
 
 // Some and every -----------------------------------------------------------------------------------------------------------------------------------
@@ -1426,14 +1442,14 @@ const account = accounts.find(acc => acc.owner === 'Jessica Davis'); // To find 
 // This only checks for equality
 // console.log(movements.includes(-130));  // True
 // This checks for a condition, handle it as an any
-const anyDeposits = movements.some(mov => mov > 1500);
+const anyDeposits = movements.some((mov) => mov > 1500);
 // console.log(anyDeposits); // True
 
 // console.log(movements.every(mov => mov > 0)); // False
 // Every aspect needs to match to return true, if one is wrong, it returns false
 
 // We can get separate callbacks too
-const deposit = mov => mov > 0;
+const deposit = (mov) => mov > 0;
 // console.log(movements.some(deposit));
 // console.log(movements.every(deposit));
 // console.log(movements.filter(deposit));
@@ -1446,18 +1462,18 @@ const arrDeep = [[[3, 2], 5], [5, [6, 7]], 3, 9];
 
 // This would be with flat method
 const overallBalance = accounts
-  .map(acc => acc.movements)
+  .map((acc) => acc.movements)
   .flat()
   .reduce((acc, mov) => acc + mov, 0);
 // console.log(overallBalance);
 // With flatMap
 const overallBalance2 = accounts
-  .flatMap(acc => acc.movements) // flatMap only goes ONE level deep into arrays
+  .flatMap((acc) => acc.movements) // flatMap only goes ONE level deep into arrays
   .reduce((acc, mov) => acc + mov, 0);
 // console.log(overallBalance2);
 
 // Sort ------------------------------------------------------------------------------------------------------------------------------------------------
-const owners = ['Jonas', 'Marta', 'Adam', 'Chech'];
+const owners = ["Jonas", "Marta", "Adam", "Chech"];
 // console.log(owners.sort()); // Adam, Chech, Jonas, Marta // The sort method will MODIFY original array
 // The same code will NOT work for numbers, since the sort uses strings
 
@@ -1483,35 +1499,35 @@ const arrz = Array.from({ length: 7 }, (_, i) => i + 1); // (_, i) => _ is a thr
 // console.log(arrz); // 1, 2, 3, 4, 5, 6, 7
 
 // This code works in script file
-labelBalance.addEventListener('click', function () {
+labelBalance.addEventListener("click", function () {
   // AddEventListener doesn't have to be only on button
   const movementsUI = Array.from(
-    document.querySelectorAll('.movements__value'), // Create array from movements__value
-    el => Number(el.textContent.replace('€', '')) // Make it numbers and remove € sign
+    document.querySelectorAll(".movements__value"), // Create array from movements__value
+    (el) => Number(el.textContent.replace("€", "")) // Make it numbers and remove € sign
   );
   // console.log(movementsUI);
 });
 
 // Adding all deposits together
 const bankDepositsSum = accounts
-  .flatMap(acc => acc.movements) // First taking all the nested arrays out of the main movements array with flatMap
-  .filter(mov => mov > 0) // Then we filter all deposits, aka positive values mov > 0
+  .flatMap((acc) => acc.movements) // First taking all the nested arrays out of the main movements array with flatMap
+  .filter((mov) => mov > 0) // Then we filter all deposits, aka positive values mov > 0
   .reduce((sum, cur) => sum + cur, 0); // Then we add all together // 0 means start from number 0
 
 // How many deposits in the bank at least 1000
 const numDeposits1000 = accounts
-  .flatMap(acc => acc.movements)
-  .filter(mov => mov > 1000).length; // .length is needed because wanna see how many deposits are > 1000
+  .flatMap((acc) => acc.movements)
+  .filter((mov) => mov > 1000).length; // .length is needed because wanna see how many deposits are > 1000
 
 // Create an object with deposits and withdrawals
 // (1) const sums = accounts
 const { deposits, withdrawals } = accounts
-  .flatMap(acc => acc.movements)
+  .flatMap((acc) => acc.movements)
   .reduce(
     (sums, current) => {
       // current > 0 ? (sums.deposits += current) : (sums.withdrawals += current);
       // return sums; // WARNING: when you have {} you do need the return statement!!!
-      sums[current > 0 ? 'deposits' : 'withdrawals'] += current; // Same code as above rewritten
+      sums[current > 0 ? "deposits" : "withdrawals"] += current; // Same code as above rewritten
       return sums; // WARNING: when you have {} you do need the return statement!!!
     }, // If current is > 0 it's an deposit + current value and vice versa
     { deposits: 0, withdrawals: 0 }
@@ -1525,13 +1541,13 @@ const convertTitleCase = function (title) {
   const exceptions = ['as', 'at', 'by', 'for', 'in', 'of', 'off', 'on', 'per', 'to', 'up', 'via', 'a', 'an', 'the', 'and'];
   const titleCase = title
     .toLowerCase() // First making the sentence lowecase
-    .split(' ') // Splitting every word
+    .split(" ") // Splitting every word
     .map(
-      word =>
+      (word) =>
         exceptions.includes(word) ? word : word[0].toUpperCase() + word.slice(1)
       // If there is exeption word, just return the word (exeptions.includes(word) ? word), otherwise return the rest
     )
-    .join(' '); // Taking first letter every word, making capital, and then adding rest on top with slice
+    .join(" "); // Taking first letter every word, making capital, and then adding rest on top with slice
   return titleCase;
 };
 // console.log(convertTitleCase('this is a nice title'));
@@ -1588,16 +1604,16 @@ const randomInt = (min, max) =>
 // console.log(5 % 2); // 1, 2 goes into 5 and remainder is 1
 // console.log(8 % 3); // 2
 // Can calculate if something is even or not
-const isEven = n => n % 2 === 0; // Remainder left is 0, so the number is even
+const isEven = (n) => n % 2 === 0; // Remainder left is 0, so the number is even
 // console.log(isEven(8)); // True
 // console.log(isEven(23)); // False
 
 // This works in script.js file
 labelBalance.addEventListener(function () {
   // When clcicking on the big balance number
-  [...document.querySelectorAll('.movements__row')].forEach(function (row, i) {
+  [...document.querySelectorAll(".movements__row")].forEach(function (row, i) {
     // I create an array and spread it in there, so I can call forEach
-    if (i % 2 === 0) row.style.backgroundColor = 'orangered'; // To color every second row, if we change === 1, it changes rows
+    if (i % 2 === 0) row.style.backgroundColor = "orangered"; // To color every second row, if we change === 1, it changes rows
     // i % 2 === 0
     // ? (row.style.backgroundColor = 'orangered')  // Changing one rows to orangered, others to blue
     // : (row.style.backgroundColor = 'blue');
@@ -1612,17 +1628,17 @@ labelBalance.addEventListener(function () {
 // Creating dates and time ----------------------------------------------------------------------------------------------------------------------------
 const account1 = {
   movementsDates: [
-    '2019-11-18T21:31:17.178Z',
-    '2019-12-23T07:42:02.383Z',
-    '2020-01-28T09:15:04.904Z',
-    '2020-04-01T10:17:24.185Z',
-    '2020-05-08T14:11:59.604Z',
-    '2020-05-27T17:01:17.194Z',
-    '2020-07-11T23:36:17.929Z',
-    '2020-07-12T10:51:36.790Z',
+    "2019-11-18T21:31:17.178Z",
+    "2019-12-23T07:42:02.383Z",
+    "2020-01-28T09:15:04.904Z",
+    "2020-04-01T10:17:24.185Z",
+    "2020-05-08T14:11:59.604Z",
+    "2020-05-27T17:01:17.194Z",
+    "2020-07-11T23:36:17.929Z",
+    "2020-07-12T10:51:36.790Z",
   ],
-  currency: 'EUR',
-  locale: 'pt-PT', // de-DE
+  currency: "EUR",
+  locale: "pt-PT", // de-DE
 };
 const now = new Date();
 // console.log(now);
@@ -1648,12 +1664,12 @@ const days1 = calcDaysPassed(new Date(2037, 3, 14), new Date(2037, 10, 2));
 // Internationalization ------------------------------------------------------------------------------------------------------------------------------
 const US = new Date();
 const times = {
-  hour: 'numeric',
-  minute: 'numeric',
-  day: 'long',
-  month: 'long', // Can also be numeric // 2-digit
-  year: 'numeric', // 2-digit
-  weekday: 'long',
+  hour: "numeric",
+  minute: "numeric",
+  day: "long",
+  month: "long", // Can also be numeric // 2-digit
+  year: "numeric", // 2-digit
+  weekday: "long",
 };
 const locale = navigator.language; // It gets the language from the user directly
 // labelDate.textContent = new Intl.DateTimeFormat('en-US', times).format(US);  // When manually
@@ -1662,10 +1678,10 @@ labelDate.textContent = new Intl.DateTimeFormat(locale, times).format(US); // Wh
 // Numbers
 const num = 3882466.23;
 const options = {
-  style: 'unit', // These actually come from documentation (MDN) for example style: 'currency'
-  unit: 'mile-per-hour', // Of course there are more of these for example unit: 'celcius'
+  style: "unit", // These actually come from documentation (MDN) for example style: 'currency'
+  unit: "mile-per-hour", // Of course there are more of these for example unit: 'celcius'
 };
-const USNum = new Intl.NumberFormat('en-US', options).format(num);
+const USNum = new Intl.NumberFormat("en-US", options).format(num);
 // console.log(USNum);
 const browserLng = new Intl.NumberFormat(navigator.language, options).format(
   num
@@ -1676,10 +1692,10 @@ const browserLng = new Intl.NumberFormat(navigator.language, options).format(
 setTimeout(
   // (ing1, ing2) => console.log(`Here is your pizza with ${ing1} and ${ing2}`),
   3000,
-  'olives',
-  'mushrooms'
+  "olives",
+  "mushrooms"
 ); // Argumments are added after the time value
-const ingredients2 = ['olives', 'spinach'];
+const ingredients2 = ["olives", "spinach"];
 setTimeout(
   // (ing1, ing2) => console.log(`Here is your pizza with ${ing1} and ${ing2}`),
   3000,
@@ -1695,17 +1711,17 @@ setInterval(function () {
 document.documentElement; // Selects the whole page
 document.head;
 document.body;
-const header = document.querySelector('.header'); // To select just one class
-const allSections = document.querySelectorAll('.section');
+const header = document.querySelector(".header"); // To select just one class
+const allSections = document.querySelectorAll(".section");
 // When there is many classes to select with the same name, aka section-1, section-2 etc
-document.getElementById('section--1'); // As name implies
-const allButtons = document.getElementsByTagName('button'); // Gets all the button tags for example
-document.getElementsByClassName('btn');
+document.getElementById("section--1"); // As name implies
+const allButtons = document.getElementsByTagName("button"); // Gets all the button tags for example
+document.getElementsByClassName("btn");
 
 // Creating and inserting elements
 insertAdjacentHTML();
-const messageDiv = document.createElement('div'); // Creating an element
-messageDiv.classList.add('cookie-message'); // Search from css file
+const messageDiv = document.createElement("div"); // Creating an element
+messageDiv.classList.add("cookie-message"); // Search from css file
 // messageDiv.textContent = 'We use cookies';
 messageDiv.innerHTML =
   'We use cookies. <button class="btn btn--close-cookie">Got it!</button>'; // An actual HTML code
@@ -1717,57 +1733,57 @@ header.after(messageDiv);
 
 // Delete elements
 document // Remove cookie message
-  .querySelector('.btn--close-cookie')
-  .addEventListener('click', function () {
+  .querySelector(".btn--close-cookie")
+  .addEventListener("click", function () {
     messageDiv.remove();
   });
 
 // Styles
-messageDiv.style.backgroundColor = '#37383d';
-messageDiv.style.width = '120%';
+messageDiv.style.backgroundColor = "#37383d";
+messageDiv.style.width = "120%";
 getComputedStyle(messageDiv).color; // To get styles for something, so the color part changes anything we need to find
 messageDiv.style.height = // We want to change the messageDiv height, but we don't know the browser set height
-  Number.parseFloat(getComputedStyle(messageDiv).height, 10) + 40 + 'px';
+  Number.parseFloat(getComputedStyle(messageDiv).height, 10) + 40 + "px";
 // So we get it from getComputedStyle(messageDiv).height, but since it's a string, we need to Number.parsefloat it
 // Parsefloat since it's a float number, we need also the ,10 then 40 we adding and pixels ('px')
-document.documentElement.style.setProperty('--color-primary', 'orangered');
+document.documentElement.style.setProperty("--color-primary", "orangered");
 // This is changing the root style from CSS, BUT it is easier to do like on top examples
 
 // Chaning attributes (HTML)
-const logo = document.querySelector('.nav__logo');
+const logo = document.querySelector(".nav__logo");
 // console.log(logo.alt);  // These two work, since they are standard usage for a pic
 // console.log(logo.src);
 // console.log(logo.designer); // We set the designer ourselves, and it won't work since it's not a standard
 // console.log(logo.getAttribute('designer')); // So we have to do this way to get the designer
-logo.alt = 'Beautiful picture'; // To set something that's standard
-logo.setAttribute('company', 'Bankist'); // To set something non standard
+logo.alt = "Beautiful picture"; // To set something that's standard
+logo.setAttribute("company", "Bankist"); // To set something non standard
 
 // Classes
-logo.classList.add('something', 'something');
+logo.classList.add("something", "something");
 logo.classList.remove();
 logo.classList.toggle();
 logo.classList.contains();
 
 // Scrolling
-const btnScrollTo = document.querySelector('.btn--scroll-to'); // Learn more in index.html
-const section1 = document.querySelector('#section--1'); // Features in index.html
-btnScrollTo.addEventListener('click', function () {
+const btnScrollTo = document.querySelector(".btn--scroll-to"); // Learn more in index.html
+const section1 = document.querySelector("#section--1"); // Features in index.html
+btnScrollTo.addEventListener("click", function () {
   // Smoothly scroll into the beginning
-  section1.scrollIntoView({ behavior: 'smooth' });
+  section1.scrollIntoView({ behavior: "smooth" });
 });
 
 // Mouse hover over something
-const h1 = document.querySelector('h1'); // When we hover over the heading the alert gets triggered
-h1.addEventListener('mouseenter', function (e) {
-  alert('Great, hovered over the heading');
+const h1 = document.querySelector("h1"); // When we hover over the heading the alert gets triggered
+h1.addEventListener("mouseenter", function (e) {
+  alert("Great, hovered over the heading");
 });
 // Can also be written as:
 const alertH1 = function (e) {
-  alert('Great, hovered over the heading');
-  h1.removeEventListener('mouseenter', alertH1); // So the alert only appears once and done
+  alert("Great, hovered over the heading");
+  h1.removeEventListener("mouseenter", alertH1); // So the alert only appears once and done
 };
-h1.addEventListener('mouseenter', alertH1);
-setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000); // After 3s you can't get the alert anymore
+h1.addEventListener("mouseenter", alertH1);
+setTimeout(() => h1.removeEventListener("mouseenter", alertH1), 3000); // After 3s you can't get the alert anymore
 
 // Event propagation ----------------------------------------------------------------------------------------------------------------------------------
 const randomInteger = (min, max) =>
@@ -1777,63 +1793,63 @@ const randomColor = () =>
   `rgb ${randomInteger(0, 255)} ,${randomInteger(0, 255)} ,${randomInteger(0, 255)}`;
 // Makes random rgb color from 0-255
 // console.log(randomColor(0, 255));
-document.querySelector('.nav').addEventListener('click', function (e) {
+document.querySelector(".nav").addEventListener("click", function (e) {
   // This is the main parent element
   this.style.backgroundColor = randomColor();
 });
-document.querySelector('.nav__links').addEventListener('click', function (e) {
+document.querySelector(".nav__links").addEventListener("click", function (e) {
   // This is a sub parent element
   this.style.backgroundColor = randomColor();
 });
-document.querySelector('.nav__link').addEventListener('click', function (e) {
+document.querySelector(".nav__link").addEventListener("click", function (e) {
   // last element in the parent tree
   this.style.backgroundColor = randomColor();
 }); // When we add this and click the last event listener all other parents bubble up and also change colors
 
 // Add event lsitener to common parent element instead
-document.querySelector('.nav__links').addEventListener('click', function (e) {
+document.querySelector(".nav__links").addEventListener("click", function (e) {
   // .nav__links is .nav__link parent element
   e.preventDefault();
-  if (e.target.classList.contains('.nav__link')) {
+  if (e.target.classList.contains(".nav__link")) {
     // ONLY if we click on .nav__link, if we click on anything else it won't work
-    const id = e.target.getAttribute('href');
+    const id = e.target.getAttribute("href");
     console.log(id);
-    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
   }
 });
 
 // Choosing child elements from parent element
-h1.querySelectorAll('.highlight'); // h1 one is on line 1721, it is select all because there are more than two .highlight
+h1.querySelectorAll(".highlight"); // h1 one is on line 1721, it is select all because there are more than two .highlight
 // h1 has a child CSS called highlight, so we can choose that, it doesn't matter how deep it goes
-h1.firstElementChild.style.color = 'white'; // Would be the first .highlight in this case
-h1.lastElementChild.style.color = 'red'; // Last one
-h1.closest('.header').style.background = 'orangered'; // Will find the closest element to the h1 that has the class .header
+h1.firstElementChild.style.color = "white"; // Would be the first .highlight in this case
+h1.lastElementChild.style.color = "red"; // Last one
+h1.closest(".header").style.background = "orangered"; // Will find the closest element to the h1 that has the class .header
 h1.previousElementSibling; // Null if there are none
 h1.nextElementSibling; // h4 in our example
 h1.parentElement.children; // Shows all the h1 children, h1 included
 [...h1.parentElement.children].forEach(function (el) {
   // Spread all children into an array
-  if (el !== h1) el.style.transform = 'scale(0.5)'; // Don't change the parent element itself h1, transform 50%
+  if (el !== h1) el.style.transform = "scale(0.5)"; // Don't change the parent element itself h1, transform 50%
 });
 
 // Tabbed component ----------------------------------------------------------------------------------------------------------------------------------
-const tabs = document.querySelectorAll('.operations__tab');
-tabsContainer.addEventListener('click', function (e) {
-  const buttonClicked = e.target.closest('.operations__tab');
+const tabs = document.querySelectorAll(".operations__tab");
+tabsContainer.addEventListener("click", function (e) {
+  const buttonClicked = e.target.closest(".operations__tab");
   // e.target.closest was needed here because the button consists of span and button, and if you press on span it is confused
   if (!buttonClicked) return; // New way of writing, if nothing is clicked (or Null in this case), return asap
   // It is the same as writing:
   // if (buttonClicked) {
   //   buttonClicked.classList.add('operations__tab--active');
   // }
-  buttonClicked.classList.add('operations__tab--active'); // Style where clicked button moves up a little
+  buttonClicked.classList.add("operations__tab--active"); // Style where clicked button moves up a little
 });
 
 // Sticky navigation: Intersection Observer API aka sticking nav to the page -----------------------------------------------------------------------------
 const navHeight = nav.getBoundingClientRect().height; // It gets the nav height dynamically
 const obsCallback = function (entries, observer) {
   // If you check the console, you can see the intersecting part with section1, at 10%
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     // We need foreach only if many thresholds
     // console.log(entry);
   });
@@ -1846,13 +1862,13 @@ const obsOptions = {
 const observer = new IntersectionObserver(obsCallback, obsOptions);
 observer.observe(section1); // Observing a certain target, line 1714, section1 is the target
 
-const imgTargets = document.querySelectorAll('img[data-src]'); // Selecting a specific type of image: data-source one
+const imgTargets = document.querySelectorAll("img[data-src]"); // Selecting a specific type of image: data-source one
 
 // Slider, slides -------------------------------------------------------------------------------------------------------------------------------------
-const slides = document.querySelectorAll('.slide');
-const btnLeft = document.querySelector('.slider__btn--left');
-const btnRight = document.querySelector('.slider__btn--right');
-const dotsContainer = document.querySelector('.dots'); // The dots under üictures
+const slides = document.querySelectorAll(".slide");
+const btnLeft = document.querySelector(".slider__btn--left");
+const btnRight = document.querySelector(".slider__btn--right");
+const dotsContainer = document.querySelector(".dots"); // The dots under üictures
 let currentSlide = 0;
 const maxSlide = slides.length; // So the slider don't just keep going till infinity
 // TranslateX comes from moving the slides left or right // Slides are 0%, 100%, 200%, 300%
@@ -1867,7 +1883,7 @@ goToSlide(0);
 const createDots = function () {
   slides.forEach((_, i) => {
     dotsContainer.insertAdjacentHTML(
-      'beforeend',
+      "beforeend",
       `<button class="dots__dot" data-slide="${i}"></button>`
     );
   });
@@ -1876,11 +1892,11 @@ createDots();
 // Active dot
 const activateDot = function (slide) {
   document
-    .querySelectorAll('.dots__dot')
-    .forEach(dot => dot.classList.remove('dots__dot--active')); // To make a dot active, we first deactive them all
+    .querySelectorAll(".dots__dot")
+    .forEach((dot) => dot.classList.remove("dots__dot--active")); // To make a dot active, we first deactive them all
   document
     .querySelector(`.dots__dot[data-slide="${slide}"]`)
-    .classList.add('dots__dot--active');
+    .classList.add("dots__dot--active");
 };
 
 const nextSlide = function () {
@@ -1902,15 +1918,15 @@ const previousSlide = function () {
   goToSlide(currentSlide);
   activateDot(currentSlide);
 };
-btnRight.addEventListener('click', nextSlide);
-btnLeft.addEventListener('click', previousSlide);
+btnRight.addEventListener("click", nextSlide);
+btnLeft.addEventListener("click", previousSlide);
 // Pressing arrow right n left
-document.addEventListener('keydown', function (e) {
-  if (e.key === 'ArrowLeft') previousSlide(); // Both codes work the same
-  e.key === 'ArrowRight' && nextSlide();
+document.addEventListener("keydown", function (e) {
+  if (e.key === "ArrowLeft") previousSlide(); // Both codes work the same
+  e.key === "ArrowRight" && nextSlide();
 });
-dotsContainer.addEventListener('click', function (e) {
-  if (e.target.classList.contains('dots__dot')) {
+dotsContainer.addEventListener("click", function (e) {
+  if (e.target.classList.contains("dots__dot")) {
     // const slide = e.target.dataset.slide  // Comes from line 1831
     const { slide } = e.target.dataset; // Restructured code
     goToSlide(slide);
@@ -1924,15 +1940,15 @@ const Person = function (firstName, birthYear) {
   this.firstName = firstName;
   this.birthYear = birthYear;
 };
-const raino2 = new Person('Raino', 1982);
+const raino2 = new Person("Raino", 1982);
 // console.log(raino2);  // Person{firstName: 'Raino', birthYear: 1982}
 // 1. New object {} is created
 // 2. Function is called, this. keyword equals {}
 // 3. {} is linked to the prototype
 // 4. Function automagtically returns {}
 // Now you can create as many persons as you want
-const matilda = new Person('Matilda', 1978);
-const jack = new Person('Jack', 1991);
+const matilda = new Person("Matilda", 1978);
+const jack = new Person("Jack", 1991);
 console.log(raino2 instanceof Person); // True, to sheck if something belongs
 
 // Prototypes
@@ -1943,10 +1959,10 @@ Person.prototype.calcAge = function () {
 raino2.calcAge(); // And then calling it here
 matilda.calcAge();
 // console.log(matilda.__proto__); // Shows all the functions and stuff matilda has
-Person.prototype.species = 'Homo Aliens'; // Just added a new line species
+Person.prototype.species = "Homo Aliens"; // Just added a new line species
 // console.log(raino2.species);  // Homo Aliens
-raino2.hasOwnProperty('firstName'); // True, good way of checking own prototypes
-raino2.hasOwnProperty('species'); // False, because it is added under Person
+raino2.hasOwnProperty("firstName"); // True, good way of checking own prototypes
+raino2.hasOwnProperty("species"); // False, because it is added under Person
 // console.log(arr.__proto__); // Shows every single command you can use with arrays
 // console.log(arr.__proto__.__proto__); // This one goes even deeper and shows all the functions you can use
 
@@ -1969,7 +1985,7 @@ class PersonCl {
   }
   set fullName(name) {
     // Setter used as well
-    if (name.includes(' ')) this._fullName = name;
+    if (name.includes(" ")) this._fullName = name;
     // Simple check if full name has a space, we use _fullName since class already uses fullName
     else alert(`${name} is not a full name!`); // And it will throw a massive error if we do that
   }
@@ -1978,7 +1994,7 @@ class PersonCl {
     return this._fullName;
   }
 }
-const janet = new PersonCl('Janet', 1982);
+const janet = new PersonCl("Janet", 1982);
 janet.calcAge();
 PersonCl.prototype.greet = function () {
   // This also still works just fine, in line 1923 and in here, two ways can do this
@@ -1989,7 +2005,7 @@ janet.greet();
 
 // Class example
 class Account {
-  bank = 'Bank of England'; // This is public
+  bank = "Bank of England"; // This is public
   #movements = []; // This didn't come from constructor, we just added it here, an empty array // # makes it private
   #pin; // Not accessible from the outside
   constructor(owner, currency, pin) {
@@ -2017,7 +2033,7 @@ class Account {
     return true;
   }
 }
-const acc1 = new Account('Jonas', 'EUR', 1111);
+const acc1 = new Account("Jonas", "EUR", 1111);
 acc1.deposit(200);
 acc1.withdraw(140);
 // console.log(acc1);
@@ -2025,7 +2041,7 @@ acc1.deposit(300).withdraw(200).withdraw(150).deposit(1000); // We can chain now
 
 // Setters (set) and getters (get) -------------------------------------------------------------------------------------------------------------------
 const account2 = {
-  owner: 'raino',
+  owner: "raino",
   movements: [200, 300, 450, 126],
 
   get latest() {
@@ -2052,7 +2068,7 @@ const PersonProto = {
   },
 };
 const sarah = Object.create(PersonProto);
-sarah.init('Sarah', 1982);
+sarah.init("Sarah", 1982);
 sarah.calcAge();
 
 // Inheritance
@@ -2065,7 +2081,7 @@ Student.prototype = Object.create(Person.prototype); //Linking prototypes, to ge
 Student.prototype.introduce = function () {
   console.log(`My name is ${this.firstName} and I study ${this.course}`);
 };
-const mike = new Student('Mike', 2002, 'Medical science');
+const mike = new Student("Mike", 2002, "Medical science");
 mike.introduce();
 mike.calcAge();
 
@@ -2088,7 +2104,7 @@ class studentCl extends PersonCl {
     // );
   }
 }
-const martha = new studentCl('Martha Stuward', 2002, 'Computer Science');
+const martha = new studentCl("Martha Stuward", 2002, "Computer Science");
 martha.introduce();
 martha.calcAge(); // This calcAge function will be the one that is in StudentCl class now since it's sooner
 
@@ -2103,14 +2119,14 @@ StudentProto.introduce = function () {
   // console.log(`My name is ${this.firstName} and I study ${this.course}`);
 };
 const jay = Object.create(StudentProto);
-jay.init('Jay', 1991, 'Medical Surgery');
+jay.init("Jay", 1991, "Medical Surgery");
 jay.introduce(); // From StudentProto
 jay.calcAge(); // From PersonProto
 
 // One more example
 class UniStudent extends PersonCl {
   // PersonCl is parent class, UniStudent is a child class, extends is automatic inheritance
-  university = 'Thames'; // Public field
+  university = "Thames"; // Public field
   #studyHours = 0; // Private field, not accessible outside of class
   #course;
   constructor(fullName, birthYear, startYear, course) {
@@ -2131,7 +2147,7 @@ class UniStudent extends PersonCl {
 
   #makeCoffee() {
     // Private method
-    return 'Here is a coffee for you';
+    return "Here is a coffee for you";
   }
 
   get testScore() {
@@ -2144,7 +2160,7 @@ class UniStudent extends PersonCl {
     this.testScore = score <= 20 ? score : 0;
   }
 }
-const student = new UniStudent('Jonas', 1982, 2022, 'Medicine');
+const student = new UniStudent("Jonas", 1982, 2022, "Medicine");
 
 // Geolocation ----------------------------------------------------------------------------------------------------------------------------------------
 navigator.geolocation.getCurrentPosition(
@@ -2156,7 +2172,7 @@ navigator.geolocation.getCurrentPosition(
     // console.log(longitude);
   },
   function () {
-    alert('Could not find position');
+    alert("Could not find position");
   }
 );
 
@@ -2187,7 +2203,7 @@ const getCountry = function (country) {
     )
     .then(data => renderCountry(data[0]));
 };
-getCountry('estonia');
+getCountry("estonia");
 
 // Building a promise
 const lotteryPromise = new Promise(function (resolve, reject) {
@@ -2196,9 +2212,9 @@ const lotteryPromise = new Promise(function (resolve, reject) {
     // Asynchronous task happenng in promise (callback)
     if (Math.random() >= 0.5) {
       // 50% of time win and 50% time loose
-      resolve('You won'); // When 50% win, you get resolve
+      resolve("You won"); // When 50% win, you get resolve
     } else {
-      reject(new Error('You lost')); // Otherwise reject
+      reject(new Error("You lost")); // Otherwise reject
     }
   }, 2000);
 });
@@ -2233,7 +2249,7 @@ const getPosition = function () {
 // getPosition().then(pos => console.log(pos));
 
 const renderError = function (msg) {
-  countriesContainer.insertAdjacentText('beforeend', msg);
+  countriesContainer.insertAdjacentText("beforeend", msg);
   // countriesContainer.style.opacity = 1;
 };
 
@@ -2248,13 +2264,13 @@ const where = async function (country) {
     const { latitude: lat, longitude: lng } = pos.coords;
     // Reverse geocoding:
     const resGeo = await fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`);
-    if (!resGeo.ok) throw new Error('Problem getting location data'); // Ok comes from console
+    if (!resGeo.ok) throw new Error("Problem getting location data"); // Ok comes from console
     const dataGeo = await resGeo.json();
     // Country data:
     const res = await fetch(
       `https://restcountries.com/v2/name/${dataGeo.country}`
     ); // We can now save all the variables (const), we could not do that before with promise
-    if (!res.ok) throw new Error('Problem getting country');
+    if (!res.ok) throw new Error("Problem getting country");
     const data = await res.json();
     renderCountry(data[0]);
     return `You are in ${dataGeo.city}, ${dataGeo.country}`;
@@ -2277,8 +2293,8 @@ const where = async function (country) {
 });
 
 // Get 3 countries, running promises in parallel:
-const getJSON = function (url, errorMsg = 'Something went wrong') {
-  return fetch(url).then(response => {
+const getJSON = function (url, errorMsg = "Something went wrong") {
+  return fetch(url).then((response) => {
     // Encapsulates the fetch
     if (!response.ok) throw new Error(`${errorMsg} (${response.status})`);
     // And when error throws a new error
@@ -2297,7 +2313,7 @@ const get3Countries = async function (c1, c2, c3) {
     // d is a single arraw element, and we want capital city from it, and it takes it out from the array
   } catch (err) {}
 };
-get3Countries('portugal', 'canada', 'tanzania');
+get3Countries("portugal", "canada", "tanzania");
 
 // Promice.race:
 (async function () {
@@ -2313,7 +2329,7 @@ get3Countries('portugal', 'canada', 'tanzania');
 const timeout = function (sec) {
   return new Promise(function (_, reject) {
     setTimeout(() => {
-      reject(new Error('Request took too long'));
+      reject(new Error("Request took too long"));
     }, sec * 1000);
   });
 };
@@ -2322,14 +2338,14 @@ Promise.race([
   // prettier-ignore
   timeout(1),
 ]) // Of course in real world the timeout is like a minute or more
-  .then(data => console.log(data[0]))
-  .catch(err => console.error(err));
+  .then((data) => console.log(data[0]))
+  .catch((err) => console.error(err));
 
 // Promise.allSettled
 Promise.allSettled([
-  Promise.resolve('Success'),
-  Promise.reject('Error'),
-  Promise.resolve('Success again'),
+  Promise.resolve("Success"),
+  Promise.reject("Error"),
+  Promise.resolve("Success again"),
 ]);
 // .then(res => console.log(res));
 // allSettled will return them all even if something is rejected in the middle
@@ -2337,7 +2353,7 @@ Promise.allSettled([
 
 // Top level await:
 const getLastPost = async function () {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts'); // Google jsonplaceholder
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts"); // Google jsonplaceholder
   const data = await res.json();
   // console.log(data);
   return { title: data.at(-1).title, text: data.at(-1).body };
