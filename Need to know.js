@@ -1,5 +1,21 @@
 'use strict';
 
+/* GIT 
+…or create a new repository on the command line
+echo "# lol" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/rpviper/lol.git
+git push -u origin main
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/rpviper/lol.git
+git branch -M main
+git push -u origin main
+*/
+
 /* 4 STEPS TO SOLVE A PROBLEM
 
 1. MAKE SURE YOU 100% UNDERSTAND THE PROBLEM. ASK THE RIGHT QUESTIONS.
